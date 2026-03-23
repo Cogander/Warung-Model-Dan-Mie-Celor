@@ -112,12 +112,144 @@ transform:translateY(-5px);
 }
 
 .card h3{
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Warung Model dan Mie Celor Ampera</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+background:#f7f3ed;
+color:#333;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 10%;
+background:white;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+color:#8b5e3c;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(120deg,#f2e7da,#ffffff);
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+color:#8b5e3c;
+}
+
+.hero p{
+font-size:16px;
+margin-bottom:25px;
+}
+
+.btn{
+background:#8b5e3c;
+color:white;
+padding:12px 22px;
+border:none;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* MENU */
+
+.menu{
+padding:60px 10%;
+text-align:center;
+}
+
+.menu h2{
+margin-bottom:40px;
+font-size:28px;
+color:#8b5e3c;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+margin-bottom:5px;
+}
+
+.price{
+color:#8b5e3c;
+font-weight:bold;
 margin-bottom:10px;
 }
 
 .card p{
 font-size:14px;
-color:#666;
+color:#555;
 }
 
 /* LOKASI */
@@ -125,12 +257,30 @@ color:#666;
 .lokasi{
 padding:60px 10%;
 text-align:center;
-background:#eef4f0;
+background:#efe6da;
 }
 
-.lokasi p{
-margin-top:10px;
-color:#555;
+iframe{
+margin-top:20px;
+border-radius:10px;
+width:100%;
+height:300px;
+border:0;
+}
+
+/* WHATSAPP BUTTON */
+
+.wa{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+font-size:14px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
@@ -139,12 +289,13 @@ footer{
 padding:30px;
 text-align:center;
 background:white;
-border-top:1px solid #eee;
+margin-top:40px;
+border-top:1px solid #ddd;
 }
 
 .tagline{
 font-weight:bold;
-color:#2f6f3e;
+color:#8b5e3c;
 margin-top:5px;
 }
 
@@ -155,52 +306,99 @@ margin-top:5px;
 
 <nav>
 <div class="logo">Warung Model Ampera</div>
+
 <ul>
 <li><a href="#">Beranda</a></li>
-<li><a href="#">Menu</a></li>
-<li><a href="#">Lokasi</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#lokasi">Lokasi</a></li>
 </ul>
+
 </nav>
 
+
 <section class="hero">
+
 <div>
-<h1>Warung Model Ampera</h1>
-<p>Nikmati kuliner khas Palembang yang lezat dekat Jembatan Ampera</p>
-<a class="btn" href="#">Lihat Menu</a>
+<h1>Warung Model & Mie Celor Ampera</h1>
+<p>Nikmati kuliner khas Palembang dengan rasa autentik, harga terjangkau, dan lokasi strategis dekat Jembatan Ampera.</p>
+
+<a class="btn" href="#menu">Lihat Menu</a>
 </div>
+
 </section>
 
-<section class="menu">
-<h2>Top Menu</h2>
+
+
+<section class="menu" id="menu">
+
+<h2>Menu Favorit</h2>
 
 <div class="menu-grid">
 
 <div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Model_Palembang.jpg">
+<div class="card-content">
 <h3>Model Ikan</h3>
-<p>Model khas Palembang dengan kuah segar dan ikan pilihan.</p>
+<div class="price">Rp 18.000</div>
+<p>Model khas Palembang dengan ikan tenggiri pilihan, disajikan dengan kuah kaldu udang yang gurih serta tambahan tahu, bihun, dan seledri segar.</p>
+</div>
 </div>
 
 <div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Tekwan.jpg">
+<div class="card-content">
+<h3>Tekwan</h3>
+<div class="price">Rp 15.000</div>
+<p>Bola ikan kecil dengan kuah udang yang segar, dilengkapi jamur kuping, bengkuang, dan taburan daun bawang yang menambah cita rasa.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Mie_Celor.jpg">
+<div class="card-content">
+<h3>Mie Celor</h3>
+<div class="price">Rp 20.000</div>
+<p>Mie khas Palembang dengan kuah santan gurih, disajikan dengan telur rebus, tauge segar, udang, dan bawang goreng.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Model_Palembang.jpg">
+<div class="card-content">
 <h3>Model Gandum</h3>
-<p>Model khas Palembang dengan kuah yang segar dan dibuat dengan sepenuh hati.</p>
+<div class="price">Rp 16.000</div>
+<p>Model gandum khas Palembang dengan tekstur lembut dari adonan gandum dan ikan, disajikan dengan kuah kaldu udang yang gurih serta tambahan tahu, bihun, dan taburan daun seledri segar.</p>
+</div>
 </div>
 
-<div class="card">
-<h3>Tekwan </h3>
-<p>Bola ikan dengan kuah udang yang gurih.</p>
 </div>
 
 </section>
 
-<section class="lokasi">
-<h2>Lokasi Kami</h2>
-<p> Dekat Jembatan Ampera, Palembang</p>
-<p>Mudah dijangkau dan cocok untuk wisata kuliner.</p>
+
+
+<section class="lokasi" id="lokasi">
+
+<h2>Lokasi Warung</h2>
+
+<p>Warung kami berada di kawasan wisata kuliner dekat Jembatan Ampera, Palembang.  
+Lokasi mudah dijangkau oleh wisatawan maupun warga lokal.</p>
+
+<iframe src="https://maps.google.com/maps?q=jembatan%20ampera&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+
 </section>
+
+
+
+<a class="wa" href="https://wa.me/6281234567890">Pesan via WhatsApp</a>
+
+
 
 <footer>
+
 <p>© 2026 Warung Model Ampera</p>
-<p class="tagline">Warung Model Ter Enak Di Palembanges</p>
+<p class="tagline">Warung Model Ter Enak di Palembang</p>
+
 </footer>
 
 </body>
