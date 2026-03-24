@@ -30,15 +30,13 @@ align-items:center;
 padding:18px 10%;
 background:white;
 box-shadow:0 3px 10px rgba(0,0,0,0.08);
-position:sticky;
-top:0;
-z-index:10;
 }
 
 .logo{
-font-size:20px;
+font-size:26px;
 font-weight:bold;
 color:#8b5e3c;
+line-height:1.2;
 }
 
 nav ul{
@@ -50,60 +48,78 @@ list-style:none;
 nav ul li a{
 text-decoration:none;
 color:#333;
-font-size:14px;
-transition:0.2s;
+font-size:16px;
 }
 
-nav ul li a:hover{
-color:#8b5e3c;
-}
-
-/* HERO SLIDER */
+/* HERO */
 
 .hero{
-height:80vh;
-position:relative;
-overflow:hidden;
+height:85vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background:linear-gradient(120deg,#f2e7da,#ffffff);
+padding:20px;
 }
 
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-opacity:0;
-transition:opacity 1s ease-in-out;
-}
+/* BOX HERO DIPERBESAR */
 
-.slide.active{
-opacity:1;
-}
+.hero-box{
 
-.hero-text{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
+background:rgba(255,255,255,0.9);
+padding:60px 40px;
+border-radius:20px;
+
+max-width:420px;
+width:90%;
+
 text-align:center;
-background:rgba(255,255,255,0.85);
-padding:30px;
-border-radius:10px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+
 }
 
-.hero-text h1{
+/* JUDUL DIPERBESAR */
+
+.hero-box h1{
+font-size:40px;
+line-height:1.3;
 color:#8b5e3c;
-margin-bottom:10px;
+margin-bottom:20px;
 }
+
+/* DESKRIPSI */
+
+.hero-box p{
+font-size:20px;
+line-height:1.5;
+margin-bottom:30px;
+color:#444;
+}
+
+/* BUTTON */
 
 .btn{
+
 background:#8b5e3c;
 color:white;
-padding:12px 20px;
-border-radius:6px;
+
+padding:16px 34px;
+
+font-size:18px;
+
+border-radius:10px;
+
 text-decoration:none;
+
 display:inline-block;
-margin-top:10px;
+
+transition:0.2s;
+
+}
+
+.btn:hover{
+background:#6f472d;
 }
 
 /* MENU */
@@ -114,8 +130,8 @@ text-align:center;
 }
 
 .menu h2{
+font-size:30px;
 margin-bottom:40px;
-font-size:28px;
 color:#8b5e3c;
 }
 
@@ -130,11 +146,6 @@ background:white;
 border-radius:12px;
 overflow:hidden;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
 }
 
 .card img{
@@ -150,10 +161,10 @@ padding:20px;
 .price{
 color:#8b5e3c;
 font-weight:bold;
-margin:5px 0;
+margin:6px 0;
 }
 
-/* MAPS */
+/* MAP */
 
 .lokasi{
 padding:70px 10%;
@@ -163,9 +174,9 @@ background:#efe6da;
 
 .map iframe{
 width:100%;
-height:400px;
+height:380px;
 border:0;
-border-radius:10px;
+border-radius:12px;
 margin-top:20px;
 }
 
@@ -175,12 +186,19 @@ margin-top:20px;
 position:fixed;
 bottom:20px;
 right:20px;
+
 background:#25d366;
+
 color:white;
-padding:14px 18px;
+
+padding:16px 26px;
+
 border-radius:50px;
+
+font-size:16px;
+
 text-decoration:none;
-font-size:14px;
+
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
@@ -204,36 +222,44 @@ color:#8b5e3c;
 <body>
 
 <nav>
-<div class="logo">Warung Model Ampera</div>
+
+<div class="logo">
+Warung<br>
+Model<br>
+Ampera
+</div>
+
 <ul>
 <li><a href="#">Beranda</a></li>
 <li><a href="#menu">Menu</a></li>
 <li><a href="#lokasi">Lokasi</a></li>
 </ul>
+
 </nav>
 
 
-<!-- HERO SLIDER -->
-
 <section class="hero">
 
-<div class="slide active" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/70/Model_Palembang.jpg')"></div>
+<div class="hero-box">
 
-<div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/55/Mie_Celor.jpg')"></div>
+<h1>
+Warung Model &  
+Mie Celor  
+Ampera
+</h1>
 
-<div class="slide" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/6/6a/Tekwan.jpg')"></div>
+<p>
+Kuliner khas Palembang  
+dekat Jembatan Ampera
+</p>
 
-<div class="hero-text">
-<h1>Warung Model & Mie Celor Ampera</h1>
-<p>Kuliner khas Palembang dekat Jembatan Ampera</p>
 <a href="#menu" class="btn">Lihat Menu</a>
+
 </div>
 
 </section>
 
 
-
-<!-- MENU -->
 
 <section class="menu" id="menu">
 
@@ -246,7 +272,7 @@ color:#8b5e3c;
 <div class="card-content">
 <h3>Model Ikan</h3>
 <div class="price">Rp 18.000</div>
-<p>Model khas Palembang dengan ikan tenggiri dan kuah kaldu udang yang gurih.</p>
+<p>Model khas Palembang dengan kuah kaldu udang gurih.</p>
 </div>
 </div>
 
@@ -255,7 +281,7 @@ color:#8b5e3c;
 <div class="card-content">
 <h3>Model Gandum</h3>
 <div class="price">Rp 16.000</div>
-<p>Model gandum lembut dengan kuah kaldu yang segar dan nikmat.</p>
+<p>Model gandum dengan kuah segar khas Palembang.</p>
 </div>
 </div>
 
@@ -264,7 +290,7 @@ color:#8b5e3c;
 <div class="card-content">
 <h3>Tekwan</h3>
 <div class="price">Rp 15.000</div>
-<p>Bola ikan kecil dengan kuah udang segar dan jamur kuping.</p>
+<p>Bola ikan kecil dengan kuah udang segar.</p>
 </div>
 </div>
 
@@ -273,7 +299,7 @@ color:#8b5e3c;
 <div class="card-content">
 <h3>Mie Celor</h3>
 <div class="price">Rp 20.000</div>
-<p>Mie khas Palembang dengan kuah santan gurih dan udang.</p>
+<p>Mie khas Palembang dengan kuah santan gurih.</p>
 </div>
 </div>
 
@@ -283,15 +309,13 @@ color:#8b5e3c;
 
 
 
-<!-- MAP -->
-
 <section class="lokasi" id="lokasi">
 
 <h2>Lokasi Warung</h2>
 
 <p>
-Jl. Jend. Sudirman No.138A, 18 Ilir,  
-Kec. Ilir Tim. I, Kota Palembang  
+Jl. Jend. Sudirman No.138A,  
+18 Ilir, Ilir Timur I, Palembang
 </p>
 
 <div class="map">
@@ -304,7 +328,9 @@ Kec. Ilir Tim. I, Kota Palembang
 
 
 
-<a class="wa" href="https://wa.me/6281234567890">Pesan WhatsApp</a>
+<a class="wa" href="https://wa.me/6281234567890">
+Pesan WhatsApp
+</a>
 
 
 
@@ -314,29 +340,6 @@ Kec. Ilir Tim. I, Kota Palembang
 <p class="tagline">Warung Model Ter Enak di Palembang</p>
 
 </footer>
-
-
-
-<script>
-
-/* SLIDER HALUS */
-
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-setInterval(()=>{
-slides[index].classList.remove("active");
-
-index++;
-if(index >= slides.length){
-index = 0;
-}
-
-slides[index].classList.add("active");
-
-},3000);
-
-</script>
 
 </body>
 </html>
